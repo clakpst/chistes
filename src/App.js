@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCategories, getJokeFromCategory } from "./Api";
+import { getCategories } from "./Api";
 
 export default function App() {
   const [category, setCategory] = useState([]);
@@ -11,8 +11,8 @@ export default function App() {
   return (
     <div>
       <ul>
-        {category.map((cat, index) => (
-          <li key={index}>{cat}</li>
+        {category.map((cat) => (
+          <li>{cat}</li>
         ))}
       </ul>
     </div>
